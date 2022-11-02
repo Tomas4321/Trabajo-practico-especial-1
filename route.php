@@ -74,7 +74,7 @@ switch ($params[0]){
         $controller->editsSpec($params[1]); 
         break;
     default:
-    // echo('404 La pagina no funciona');
+        echo('404 La pagina no funciona');
     break;
 }
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-17 20:49:48
+/* Smarty version 4.2.1, created on 2022-11-03 00:40:03
   from 'C:\xampp\htdocs\Trabajo practico especial N1\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_634da3ccacf968_87255090',
+  'unifunc' => 'content_6362ffd3842381_31093842',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ef9cb1384cf1e40539654f0716ce11465447011f' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Trabajo practico especial N1\\templates\\header.tpl',
-      1 => 1666032585,
+      1 => 1667432400,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_634da3ccacf968_87255090 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6362ffd3842381_31093842 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
 <!DOCTYPE html>
     <html lang="en">
@@ -47,11 +47,13 @@ function content_634da3ccacf968_87255090 (Smarty_Internal_Template $_smarty_tpl)
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav d-flex">
       <li class="nav-item">
+      <?php if ((isset($_SESSION['logged']))) {?>
         <a class="nav-link" aria-current="page" href="home">Inicio</a>
       </li>
+      <?php }?>
       <?php if (!(isset($_SESSION['logged']))) {?>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="login">Acceso</a>
+          <a class="nav-link" aria-current="page" href="login">Iniciar session</a>
         </li>
         <?php } else { ?>
         <li class="nav-item ml-auto">

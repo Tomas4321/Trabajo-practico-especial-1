@@ -22,11 +22,13 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav d-flex">
       <li class="nav-item">
+      {if isset($smarty.session.logged)}
         <a class="nav-link" aria-current="page" href="home">Inicio</a>
       </li>
+      {/if}
       {if !isset($smarty.session.logged)}
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="login">Acceso</a>
+          <a class="nav-link" aria-current="page" href="login">Iniciar session</a>
         </li>
         {else}
         <li class="nav-item ml-auto">
