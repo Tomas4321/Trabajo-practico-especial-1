@@ -13,14 +13,17 @@
         {/if}    
     </ul>
 {else}
-    {if isset($smarty.session.logged)}   
-    <h5>Agregar Especificaciones </h5>
+    {if isset($smarty.session.logged)}
+    <h3 class="text-danger">Este vehiculo no cuenta con Especificaciones</h3>    
+    <h5>Agregue Especificaciones</h5>
+    <div class="d-grid gap-3 col-3 mx-auto">
         <form action="addSpecs/{$id}" method="POST">
-            <label>Caballos de fuerza:<input type="text"  name="cv" required></input></label>
-            <label>Precio:<input type="text" name="precio" required></input></label>
-            <label>Fabricacion: <input type="text" name="fabricacion" required></input></label>
-            <button type="submit" class="btn btn-success">Cargar Especificaciones</button>
+            <label>Caballos de fuerza:<input class="form-control form-control-lg" type="text"  name="cv" required></input></label>
+            <label>Precio:<input class="form-control form-control-lg" type="text" name="precio" required></input></label>
+            <label>Fabricacion: <input type="text" class="form-control form-control-lg" name="fabricacion" required></input></label>
+            <button type="submit" class="btn btn-success">Agregar Especificaciones</button>
         </form>
+    </div>    
     {/if}
 {/if}
 
